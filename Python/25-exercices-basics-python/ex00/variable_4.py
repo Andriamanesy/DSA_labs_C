@@ -9,9 +9,8 @@ Calcule ton âge et stocke-le dans une variable age.
 Affiche :
 Tu as ... ans
 """
-print("Entrez votre année de naissance: ")
-annee_naissance = input()
-annee_naissance_int = int(annee_naissance)
+annee_naissance = int (input("Entrez votre année de naissance: "))
+annee_naissance_int = annee_naissance
 
 age = 2026 - annee_naissance_int
 print(f"Tu as {age} ans")
