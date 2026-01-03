@@ -1,0 +1,58 @@
+La liste chaînée est l'exercice ultime pour manipuler les pointeurs de structures. C'est ici que tu apprendras à "voir" la mémoire comme un ensemble de wagons que l'on accroche, décroche et déplace.
+
+Voici 25 exercices classés par type de liste, du classique au complexe.
+
+---
+
+### I. Listes Simplement Chaînées (Singly Linked Lists)
+
+1. **Inversion récursive :** Inversez une liste chaînée sans utiliser de boucle, uniquement par récursivité.
+2. **Recherche du milieu :** Trouvez l'élément central d'une liste en un seul parcours (indice : utilisez deux pointeurs, un qui avance deux fois plus vite que l'autre).
+3. **Fusion de deux listes triées :** Fusionnez deux listes triées en une seule liste triée, sans créer de nouveaux nœuds (en réorganisant les pointeurs existants).
+4. **Détection de boucle (Algorithme de Floyd) :** Écrivez une fonction qui détecte si une liste contient un cycle (un nœud pointe vers un nœud précédent).
+5. **Suppression des doublons :** Dans une liste triée, supprimez tous les éléments redondants pour ne garder qu'une occurrence de chaque valeur.
+6. **Le K-ième élément en partant de la fin :** Trouvez la valeur du n-ième nœud depuis la fin en un seul passage.
+7. **Partition de liste :** Étant donné une valeur , réorganisez la liste pour que tous les nœuds inférieurs à  soient avant les nœuds supérieurs ou égaux à .
+
+### II. Listes Doublement Chaînées (Doubly Linked Lists)
+
+8. **Insertion triée :** Insérez un élément dans une liste doublement chaînée tout en maintenant l'ordre croissant.
+9. **Inversion totale :** Inversez une liste doublement chaînée en échangeant les pointeurs `next` et `prev` de chaque nœud.
+10. **Suppression par pointeur direct :** Écrivez une fonction qui supprime un nœud `N` en recevant directement son adresse (sans parcourir la liste depuis le début).
+11. **Vérification de symétrie :** Vérifiez si le contenu d'une liste doublement chaînée est un palindrome.
+12. **Tri par insertion :** Implémentez le tri par insertion spécifiquement pour une liste doublement chaînée.
+
+### III. Listes Circulaires (Circular Linked Lists)
+
+13. **Le problème de Josèphe :**  personnes sont en cercle. On élimine chaque -ième personne. Trouvez la dernière personne restante en utilisant une liste circulaire.
+14. **Insertion en tête (O(1)) :** Dans une liste circulaire simple avec un pointeur sur le *dernier* élément, insérez un nouveau nœud en tête en temps constant.
+15. **Scission de liste :** Coupez une liste circulaire en deux listes circulaires de tailles égales (ou presque).
+16. **Conversion :** Transformez une liste simplement chaînée classique en liste circulaire, puis inversement.
+17. **Parcours infini sécurisé :** Écrivez une fonction d'affichage qui s'arrête exactement après avoir fait un tour complet du cercle.
+
+### IV. Listes Avancées et Spéciales
+
+18. **Liste de Listes (Matrice Creuse) :** Représentez une matrice dont la plupart des valeurs sont nulles en utilisant une liste où chaque nœud contient une autre liste (colonnes).
+19. **Liste avec pointeur aléatoire (Deep Copy) :** Chaque nœud a un pointeur `next` et un pointeur `random` (pointant vers n'importe quel nœud). Créez une copie parfaite de cette structure.
+20. **Self-Organizing List :** Implémentez une liste où, à chaque fois qu'un élément est accédé, il est déplacé en tête de liste pour accélérer les futurs accès.
+21. **XOR Linked List :** (Très difficile) Implémentez une liste doublement chaînée qui n'utilise qu'**un seul pointeur** par nœud en stockant le résultat de `prev ^ next`.
+
+### V. Défis d'Implémentation et Gestion Mémoire
+
+22. **Séquenceur de musique :** Créez une liste circulaire double où chaque nœud est une `struct Note`. Permettez de lire en avant, en arrière et de boucler.
+23. **Gestionnaire de Undo/Redo :** Utilisez une liste doublement chaînée pour stocker les actions d'un utilisateur, avec un pointeur "courant" qui se déplace lors des annulations.
+24. **File de priorité :** Implémentez une file de priorité utilisant une liste chaînée où l'insertion place toujours l'élément le plus urgent au début.
+25. **Le "Garbage Collector" manuel :** Créez une liste qui stocke les adresses de tous les `malloc` effectués dans votre programme, et une fonction `free_all()` qui nettoie tout en un seul appel.
+
+---
+
+### Pourquoi est-ce le meilleur entraînement ?
+
+Travailler sur les listes chaînées t'oblige à gérer les **cas limites** (Edge Cases) qui font planter 90% des programmes en C :
+
+* La liste est vide (`NULL`).
+* La liste n'a qu'un seul élément.
+* L'action se passe au tout début ou à la toute fin.
+* La perte accidentelle du pointeur de tête (fuite mémoire).
+
+**Lequel de ces défis te semble le plus intimidant ? Je peux t'aider à tracer le diagramme logique pour le résoudre.**

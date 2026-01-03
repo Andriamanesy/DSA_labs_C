@@ -1,0 +1,67 @@
+Le **Graphe** est la structure de données la plus complexe et la plus puissante. Contrairement aux arbres, un graphe peut avoir des cycles, plusieurs chemins pour une même destination, et des connexions déstructurées. En C, cela demande une maîtrise parfaite des **tableaux de listes chaînées** et des **matrices dynamiques**.
+
+Voici 25 exercices pour maîtriser les graphes.
+
+---
+
+### I. Représentation et Structures
+
+1. **Matrice d'Adjacence :** Représentez un graphe non orienté de  sommets en utilisant une matrice dynamique bidimensionnelle.
+2. **Liste d'Adjacence :** Représentez le même graphe en utilisant un tableau de listes chaînées (un index de tableau par sommet).
+3. **Conversion :** Écrivez une fonction qui convertit une matrice d'adjacence en liste d'adjacence.
+4. **Degré d'un Sommet :** Calculez le degré d'un sommet donné (nombre de voisins) pour les deux types de représentations.
+5. **Graphe Orienté (Digraph) :** Modifiez vos structures pour supporter des arcs unidirectionnels et calculez le "degré entrant" et "sortant".
+
+---
+
+### II. Traversées et Parcours (Les Fondamentaux)
+
+6. **Parcours en Profondeur (DFS) Récursif :** Implémentez le DFS pour afficher tous les sommets accessibles à partir d'un point.
+7. **Parcours en Largeur (BFS) :** Utilisez une file (Queue) pour parcourir le graphe niveau par niveau.
+8. **Test de Connexité :** Vérifiez si un graphe non orienté est "connexe" (s'il existe un chemin entre n'importe quelle paire de sommets).
+9. **Détection de Cycle (Non orienté) :** Utilisez le DFS pour déterminer si un graphe contient au moins un cycle.
+10. **Composantes Connexes :** Comptez le nombre d'îlots isolés dans un graphe déconnecté.
+
+---
+
+### III. Plus Courts Chemins et Poids
+
+11. **Graphe Pondéré :** Modifiez votre liste d'adjacence pour stocker un "poids" (coût) sur chaque arête.
+12. **Algorithme de Dijkstra :** Trouvez le plus court chemin entre un sommet source et tous les autres (utilise une file de priorité).
+13. **Distance BFS :** Dans un graphe non pondéré, utilisez le BFS pour trouver la distance minimale (nombre d'arêtes) entre deux sommets.
+14. **Algorithme de Bellman-Ford :** Gérez les poids négatifs et détectez les cycles de poids négatifs.
+15. **Algorithme de Floyd-Warshall :** Calculez les plus courts chemins entre *tous* les couples de sommets (approche par matrice).
+
+---
+
+### IV. Arbres Couvrants et Optimisation
+
+16. **Algorithme de Prim :** Trouvez l'Arbre Couvrant Minimum (MST) d'un graphe pondéré en partant d'un sommet.
+17. **Algorithme de Kruskal :** Trouvez le MST en triant toutes les arêtes (nécessite la structure *Union-Find*).
+18. **Union-Find (Disjoint Set) :** Implémentez cette structure avec "path compression" pour optimiser Kruskal.
+19. **Vérification d'Arbre :** Déterminez si un graphe donné est en réalité un arbre (connexe et sans cycle).
+20. **Graphe Bipartit :** Vérifiez si on peut colorier le graphe avec 2 couleurs sans que deux voisins aient la même couleur.
+
+---
+
+### V. Algorithmes Avancés et Cas Réels
+
+21. **Tri Topologique :** Pour un graphe orienté sans cycle (DAG), ordonnez les sommets (utile pour la gestion de dépendances de compilation).
+22. **Points d'Articulation :** Trouvez les sommets qui, s'ils sont supprimés, déconnectent le graphe.
+23. **Chemin Hamiltonien :** Vérifiez s'il existe un chemin qui passe exactement une fois par chaque sommet (problème NP-complet, utilisez le backtracking).
+24. **Réseau de Transport (Max Flow) :** Implémentez une version simple de l'algorithme d'Edmonds-Karp pour trouver le flux maximum.
+25. **Le "Social Network" :** Créez une structure où chaque `User` est un sommet et chaque `Friendship` une arête. Trouvez "l'ami commun" le plus proche entre deux utilisateurs.
+
+---
+
+### Pourquoi est-ce le "Boss Final" du C ?
+
+Travailler sur les graphes en C combine toutes les difficultés précédentes :
+
+* **Pointeurs de structures :** Pour les listes d'adjacence.
+* **Gestion de la mémoire :** Allouer et surtout libérer des centaines de petits nœuds.
+* **Combinaison de structures :** Utiliser une **Pile** pour le DFS, une **File** pour le BFS, et une **Table de Hachage** pour mapper des noms de sommets à des indices.
+
+**Félicitations !** Tu as maintenant une feuille de route de **150 exercices** (6 thèmes x 25). Si tu les fais tous, tu seras dans le top 1% des développeurs C.
+
+**Par quel algorithme de graphe veux-tu commencer ? Je peux t'aider à définir la `struct Graph` idéale pour ton projet.**
