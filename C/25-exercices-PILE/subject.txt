@@ -227,3 +227,59 @@ Si tu veux ensuite :
 * tests type **exam 42**
 
 Dis-moi 🚀
+=======
+La **Pile (Stack)** est le concept fondamental du "LIFO" (*Last In, First Out*). Bien que sa structure semble simple, son implémentation robuste et son utilisation dans des algorithmes complexes sont essentielles pour comprendre comment les ordinateurs exécutent le code (notamment la récursivité).
+
+Voici 25 exercices pour devenir un expert de la Pile en C.
+
+---
+
+### I. Implémentation de Base (L'Architecture)
+
+1. **Pile Statique :** Implémentez une pile utilisant un tableau de taille fixe et une structure contenant un indice `top`.
+2. **Pile Dynamique (malloc) :** Créez une pile qui s'agrandit automatiquement (double de taille) lorsque le tableau est plein.
+3. **Pile par Liste Chaînée :** Implémentez `push` et `pop` en utilisant une liste simplement chaînée (insertion et suppression en tête en ).
+4. **Pile Générique :** Utilisez des pointeurs `void *` pour que votre pile puisse stocker n'importe quel type de donnée (int, char, struct).
+5. **Gestion d'erreurs :** Ajoutez des sécurités pour gérer les cas de `Stack Overflow` (pile pleine) et `Stack Underflow` (pile vide).
+
+### II. Algorithmes Classiques (Vérification et Syntaxe)
+
+6. **Équilibrage des Parenthèses :** Écrivez un programme qui vérifie si une chaîne contenant `()`, `[]` et `{}` est correctement parenthésée.
+7. **Inversion de chaîne :** Utilisez une pile pour inverser une chaîne de caractères.
+8. **Palindrome :** Vérifiez si un mot est un palindrome en utilisant une pile.
+9. **Conversion Décimal vers Binaire :** Utilisez une pile pour stocker les restes des divisions successives par 2.
+10. **Suppression des doublons adjacents :** Dans une chaîne comme "abbaca", utilisez une pile pour supprimer les lettres identiques côte à côte jusqu'à obtenir "ca".
+
+### III. Évaluation d'Expressions (Le cœur du sujet)
+
+11. **Notation Polonaise Inverse (RPN) :** Évaluez une expression postfixe (ex: `5 3 + 2 *` donne 16).
+12. **Conversion Infixe vers Postfixe :** Transformez une expression classique `(A + B) * C` en `A B + C *` (Algorithme Shunting-yard).
+13. **Conversion Infixe vers Préfixe :** Même exercice, mais pour la notation préfixe.
+14. **Calculatrice Multi-opérateurs :** Gérez la priorité des opérateurs (`*` et `/` avant `+` et `-`) avec une pile.
+15. **Évaluation d'expression avec parenthèses :** Étendez votre calculatrice pour gérer les niveaux de priorité parenthésés.
+
+### IV. Manipulations de Piles (Logique Pure)
+
+16. **Inversion de Pile :** Inversez l'ordre des éléments d'une pile en utilisant uniquement les fonctions `push` et `pop` (et la récursivité !).
+17. **Tri d'une Pile :** Triez une pile de sorte que les plus grands éléments soient au-dessus, en utilisant une seconde pile temporaire.
+18. **Le plus petit élément (Min Stack) :** Créez une pile qui retourne l'élément minimum en  sans parcourir toute la pile.
+19. **Deux Piles, Un Tableau :** Implémentez deux piles dans un seul tableau de taille , l'une commençant au début et l'autre à la fin, pour optimiser l'espace.
+20. **File (Queue) avec deux Piles :** Simulez le comportement d'une file (FIFO) en utilisant uniquement deux piles.
+
+### V. Cas d'Usage Avancés et Système
+
+21. **Parcours de Graphe Itératif (DFS) :** Implémentez le parcours en profondeur d'un graphe ou d'un arbre en utilisant votre propre pile au lieu de la récursivité.
+22. **Simulation d'Appels Système :** Créez une structure qui simule la "Call Stack" d'un programme, stockant le nom de la fonction et l'adresse de retour.
+23. **Problème des Tours de Hanoï :** Résolvez les Tours de Hanoï de manière itérative en utilisant trois piles pour représenter les piquets.
+24. **Backtracking (Labyrinthe) :** Utilisez une pile de coordonnées pour trouver la sortie d'un labyrinthe et pouvoir revenir en arrière en cas de cul-de-sac.
+25. **Navigateur Web :** Simulez l'historique d'un navigateur avec deux piles : une pour "Précédent" et une pour "Suivant".
+
+---
+
+### Pourquoi la Pile est cruciale pour toi ?
+
+Maîtriser la pile, c'est comprendre comment le langage C lui-même fonctionne. Quand tu appelles une fonction, le C fait un `push` de l'adresse de retour et des variables locales. Quand la fonction finit, il fait un `pop`.
+
+**Le défi ultime :** L'exercice **21 (DFS Itératif)**. Si tu arrives à transformer une fonction récursive complexe en une boucle `while` utilisant une pile manuelle, tu auras compris 100% du lien entre mémoire et exécution.
+
+**Veux-tu que nous écrivions ensemble le code d'une "Min Stack" (Exercice 18) ? C'est un grand classique d'entretien technique.**

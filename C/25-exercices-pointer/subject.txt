@@ -256,3 +256,51 @@ Si tu veux, au prochain message je peux :
 * ou un **cheat sheet visuel mémoire/pointeurs**
 
 Dis-moi 👍
+=======
+Maîtriser les pointeurs est le véritable "rite de passage" en langage C. Pour progresser, il faut passer de la simple compréhension de l'adresse mémoire à la manipulation de structures complexes et à l'arithmétique avancée.
+
+Voici 25 exercices classés par thématiques, allant de la manipulation de base à des concepts de haut niveau.
+
+---
+
+### I. Arithmétique et Tableaux
+
+1. **Inversion de tableau :** Inversez un tableau d'entiers sur place en utilisant uniquement deux pointeurs (début et fin), sans aucune variable d'indice `i`.
+2. **Copie `strcpy` personnalisée :** Réimplémentez `strcpy` en utilisant l'arithmétique de pointeurs (syntaxe `*d++ = *s++`).
+3. **Recherche de sous-chaîne :** Écrivez une fonction qui retourne un pointeur vers la première occurrence d'une chaîne B dans une chaîne A sans utiliser de fonctions de `string.h`.
+4. **Palindromes complexes :** Vérifiez si une phrase est un palindrome en ignorant la casse et la ponctuation, en utilisant uniquement des déplacements de pointeurs.
+5. **Somme de matrices :** Additionnez deux matrices dynamiques en traitant le bloc mémoire comme un simple pointeur linéaire.
+
+### II. Pointeurs de Pointeurs (Double Pointeurs)
+
+6. **Allocation de matrice :** Écrivez une fonction qui alloue une matrice de  et la renvoie via un triple pointeur ou un retour de fonction, de sorte que `mat[i][j]` soit valide.
+7. **Rotation de lignes :** Échangez deux lignes d'une matrice dynamique en ne modifiant que les pointeurs de lignes, pas les données elles-mêmes.
+8. **Libération sécurisée :** Créez une fonction `safe_free(void **ptr)` qui libère la mémoire et met le pointeur à `NULL` pour éviter les "dangling pointers".
+9. **Tri de chaînes :** Triez un tableau de chaînes de caractères (`char **argv`) par ordre alphabétique en manipulant les adresses.
+10. **Redimensionnement de tableau :** Implémentez une fonction qui simule un `realloc` pour un tableau de pointeurs vers des structures.
+
+### III. Pointeurs de Fonctions
+
+11. **Calculatrice générique :** Créez un tableau de pointeurs de fonctions pour les opérations `+`, `-`, `*`, `/` et appelez-les via un index.
+12. **Tri `qsort` maison :** Implémentez un algorithme de tri (bulle ou insertion) qui prend un pointeur de fonction de comparaison pour trier n'importe quel type de donnée.
+13. **Système de Callbacks :** Simulez un bouton avec une structure contenant un pointeur de fonction qui s'exécute lorsqu'on appelle une fonction `click()`.
+14. **Map en C :** Écrivez une fonction `map(int *arr, int size, int (*f)(int))` qui applique la fonction `f` à chaque élément du tableau.
+
+### IV. Structures de Données Dynamiques
+
+15. **Liste chaînée simple :** Inversez une liste chaînée "sur place" en modifiant uniquement les liens des pointeurs.
+16. **Détection de cycle :** Implémentez l'algorithme de Floyd (le lièvre et la tortue) pour détecter un cycle dans une liste chaînée.
+17. **Pile (Stack) générique :** Créez une pile utilisant des `void *` pour stocker n'importe quel type de donnée.
+18. **Liste doublement chaînée :** Insérez un élément dans une liste triée en gérant correctement les pointeurs `prev` et `next`.
+19. **Arbre Binaire :** Écrivez une fonction récursive pour calculer la hauteur d'un arbre en utilisant les pointeurs de structure `left` et `right`.
+
+### V. Manipulation Bas Niveau et Gestion Mémoire
+
+20. **Analyse de l'Endienness :** Utilisez un pointeur `char *` sur un `int` pour déterminer si votre machine est en Little-Endian ou Big-Endian.
+21. **Alignement mémoire :** Écrivez une fonction qui arrondit une adresse de pointeur vers le multiple de 8 supérieur le plus proche.
+22. **Séquence d'octets :** Écrasez les 2 octets de poids fort d'un `int` en utilisant un cast de pointeur.
+23. **Exploration de la Stack :** Affichez les valeurs situées "au-dessus" d'une variable locale dans la pile en itérant sur son adresse (attention aux accès illégaux).
+24. **Pool de mémoire :** Allouez un gros bloc de `char` et créez votre propre fonction `my_malloc` qui distribue des morceaux de ce bloc.
+25. **Pointeur Opaques :** Implémentez un module "Pile" où la structure est cachée dans le `.c` et manipulée uniquement via des pointeurs dans le `.h`.
+
+---

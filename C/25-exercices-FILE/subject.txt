@@ -223,3 +223,57 @@ Si tu veux ensuite :
 * exercices bonus type **exam 42**
 
 Dis-moi 🔥
+=======
+La **File (Queue)** est le pendant du "FIFO" (*First In, First Out*). C'est la structure indispensable pour la gestion des processus, les buffers réseau et les simulations de flux. En C, elle est plus complexe à implémenter qu'une pile car elle nécessite souvent de gérer deux extrémités (tête et queue) ou de jongler avec l'arithmétique modulaire (files circulaires).
+
+Voici 25 exercices pour maîtriser les Files.
+
+---
+
+### I. Implémentations Fondamentales
+
+1. **File Statique (Tableau) :** Implémentez une file avec un tableau fixe. Gérez le décalage des éléments à chaque retrait (attention à la complexité ).
+2. **File Circulaire (Tableau) :** Optimisez l'exercice précédent en utilisant deux indices (`head` et `tail`) et l'opérateur modulo `%` pour éviter de décaler les éléments (complexité ).
+3. **File par Liste Chaînée :** Implémentez une file utilisant une liste simplement chaînée avec un pointeur sur `front` et un sur `rear`.
+4. **File Dynamique :** Créez une file sur base de tableau qui se réalloue (double sa taille) lorsqu'elle est pleine.
+5. **File Générique :** Implémentez une file capable de stocker des `void *` pour accepter n'importe quel type de donnée.
+
+### II. Algorithmes de Manipulation
+
+6. **Inverser une File :** Inversez l'ordre des éléments d'une file en utilisant uniquement une pile comme structure auxiliaire.
+7. **Rotation de File :** Écrivez une fonction qui déplace les  premiers éléments à la fin de la file.
+8. **Vérification de File Triée :** Vérifiez si les éléments d'une file sont dans un ordre spécifique sans utiliser de structure de données supplémentaire (uniquement par retraits/ajouts).
+9. **Intercaler deux files :** Prenez deux files et fusionnez-les en alternant les éléments (ex:  et ).
+10. **Générateur de Nombres Binaires :** Utilisez une file pour générer et afficher les nombres binaires de 1 à .
+
+### III. Files à Priorité et Variantes
+
+11. **File de Priorité Simple :** Implémentez une file où chaque élément a une priorité. L'élément avec la plus haute priorité est toujours retiré en premier.
+12. **Deque (Double-Ended Queue) :** Implémentez une file où l'on peut ajouter et retirer des éléments aux deux extrémités (tête et queue).
+13. **File de Priorité avec Tas (Heap) :** (Avancé) Optimisez votre file de priorité en utilisant un tas binaire pour obtenir des performances en .
+14. **File à deux piles :** Implémentez une file en utilisant exclusivement deux piles (exercice miroir de celui des piles).
+15. **File de structures complexes :** Gérez une file de "Tâches" (`struct Task`) contenant un ID, une priorité et un pointeur de fonction.
+
+### IV. Applications Pratiques et Systèmes
+
+16. **Buffer Circulaire (Ring Buffer) :** Créez un buffer de communication où les nouvelles données écrasent les anciennes si le buffer est plein.
+17. **Simulation de File d'Attente :** Simulez une caisse de supermarché où des clients arrivent à intervalles aléatoires. Calculez le temps d'attente moyen.
+18. **Parcours en Largeur (BFS) :** Utilisez une file pour parcourir un arbre binaire ou un graphe niveau par niveau.
+19. **Système de Cache "LRU" (Simple) :** Utilisez une file pour simuler un cache où l'élément le plus ancien est supprimé quand on ajoute un nouvel élément.
+20. **Gestionnaire d'Impression :** Simulez un serveur d'impression qui gère des documents de tailles différentes selon l'ordre d'arrivée.
+
+### V. Défis Avancés
+
+21. **Queue avec "Min" constant :** Implémentez une file qui permet de récupérer la valeur minimale présente dans la file en .
+22. **File Circulaire de Taille Variable :** Implémentez un Ring Buffer qui peut se redimensionner sans perdre l'ordre circulaire des données.
+23. **Partition de File :** Séparez une file d'entiers en deux files : une contenant les nombres pairs, l'autre les impairs.
+24. **Multi-File de Priorité :** Créez une structure qui gère 3 files internes (Priorité Haute, Moyenne, Basse) et vide la haute avant de passer à la moyenne.
+25. **L'itérateur de File :** Implémentez un mécanisme permettant de parcourir les éléments d'une file sans les détruire (sans faire de `pop`).
+
+---
+
+### Le piège à éviter en C
+
+Le plus difficile avec les files en tableau, c'est la **"dérive" des indices**. Si tu n'utilises pas une file circulaire, tes indices `head` et `tail` vont finir par sortir du tableau même s'il reste de la place au début. L'exercice **2 (File Circulaire)** est celui qui te fera comprendre l'importance de l'arithmétique modulaire.
+
+**Par quoi souhaites-tu commencer ? Si tu veux, je peux te donner le code de départ pour l'exercice 2 (le modulo est magique ici !).**

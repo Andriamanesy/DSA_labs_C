@@ -210,3 +210,60 @@ Si tu veux ensuite :
 * exercices type **exam 42**
 
 Dis-moi 🌳🔥
+=======
+Les arbres sont la suite logique des listes chaînées, mais ils ajoutent une dimension : la **récursivité**. Maîtriser les arbres, c'est comprendre comment naviguer dans une structure qui s'étend de manière exponentielle.
+
+Voici 25 exercices sur les arbres (principalement binaires) pour atteindre un niveau expert.
+
+---
+
+### I. Les Bases et Traversées (Parcours)
+
+1. **Les 3 Classiques :** Implémentez les parcours récursifs `Infixe`, `Préfixe` et `Suffixe`.
+2. **Parcours en Largeur (BFS) :** Affichez l'arbre niveau par niveau (utilise une File/Queue).
+3. **Hauteur et Taille :** Calculez la hauteur maximale d'un arbre et le nombre total de nœuds.
+4. **Compte des Feuilles :** Écrivez une fonction qui compte uniquement les nœuds qui n'ont pas d'enfants.
+5. **Somme des valeurs :** Calculez la somme de toutes les données stockées dans un arbre d'entiers.
+
+### II. Arbres Binaires de Recherche (ABR / BST)
+
+6. **Insertion et Recherche :** Implémentez l'insertion et la recherche efficace dans un ABR.
+7. **Validation d'ABR :** Vérifiez si un arbre binaire donné respecte bien les propriétés d'un ABR (attention aux pièges des nœuds lointains !).
+8. **Minimum et Maximum :** Trouvez les valeurs extrêmes sans parcourir tout l'arbre.
+9. **Successeur Infixe :** Trouvez le nœud qui suit immédiatement un nœud donné dans un parcours infixe.
+10. **Suppression de nœud :** Implémentez la suppression dans un ABR (le cas du nœud avec deux enfants est le plus complexe).
+
+### III. Transformations et Symétrie
+
+11. **Arbre Miroir :** Écrivez une fonction qui transforme un arbre en son image miroir (inverse chaque fils gauche et droit).
+12. **Vérification de Symétrie :** Vérifiez si un arbre est le miroir de lui-même.
+13. **Égalité d'arbres :** Vérifiez si deux arbres sont structurellement identiques et possèdent les mêmes valeurs.
+14. **Conversion en Liste :** Transformez un ABR en une liste doublement chaînée triée (sans créer de nouveaux nœuds).
+
+### IV. Équilibrage et Arbres Spéciaux
+
+15. **Vérification d'Équilibre :** Vérifiez si un arbre est "équilibré" au sens de l'AVL (la différence de hauteur entre fils gauche et droit ne dépasse pas 1).
+16. **Rotation (Gauche/Droite) :** Implémentez les fonctions de base nécessaires aux arbres AVL.
+17. **Arbre Binaire Complet :** Vérifiez si chaque niveau de l'arbre est rempli, sauf éventuellement le dernier.
+18. **Tas (Heap) :** Vérifiez si un arbre respecte la propriété de "Max-Heap" (chaque parent est supérieur à ses enfants).
+19. **Ancêtre Commun le plus proche (LCA) :** Trouvez le nœud le plus bas dans l'arbre qui a deux nœuds donnés comme descendants.
+
+### V. Défis Avancés et Cas Réels
+
+20. **Chemin le plus long :** Trouvez le "diamètre" de l'arbre (la distance la plus longue entre deux feuilles).
+21. **Construction depuis parcours :** Reconstruisez un arbre binaire à partir de ses parcours Préfixe et Infixe.
+22. **Arbre d'Expression :** Créez un arbre qui représente une opération mathématique (ex: `(3+5)*2`) et évaluez-le.
+23. **Serialization :** Transformez un arbre en un tableau ou un fichier, puis rechargez-le en mémoire.
+24. **Trie (Arbre Préfixe) :** Implémentez un arbre où chaque nœud est un caractère pour stocker un dictionnaire de mots.
+25. **Vue de Profil :** Affichez uniquement les nœuds visibles si vous regardiez l'arbre depuis le côté droit.
+
+---
+
+### Pourquoi est-ce le test ultime pour un programmeur ?
+
+* **La Récursivité :** On ne peut pas tricher. Si tu ne comprends pas comment la pile d'appels (Stack) fonctionne, tu ne peux pas manipuler d'arbres.
+* **La Double Indirection :** Pour modifier un arbre (ex: insertion), on utilise souvent des pointeurs de pointeurs (`Node **root`) pour modifier l'adresse contenue dans le parent.
+
+**Mon conseil :** Commence par l'**exercice 7 (Validation d'ABR)**. C'est l'exercice de recrutement classique car il demande une rigueur logique parfaite sur les pointeurs et les bornes de valeurs.
+
+Veux-tu que je t'explique la structure de donnée de base (`struct Node`) pour commencer ?

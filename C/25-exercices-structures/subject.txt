@@ -244,3 +244,62 @@ Si tu veux ensuite, je peux :
 * te faire un **comparatif struct vs objets (C vs OOP)**
 
 Dis-moi 👌
+=======
+Mélanger les pointeurs et les structures est l'étape où le C devient réellement puissant. C'est ainsi que l'on crée des systèmes complexes, des moteurs de jeux ou des noyaux d'OS.
+
+Voici 25 exercices progressifs pour maîtriser l'utilisation des **structures**, de l'allocation dynamique et des pointeurs de structures.
+
+---
+
+### I. Bases et Passage d'Arguments
+
+1. **Passage par valeur vs adresse :** Créez une structure `Point (x, y)`. Écrivez une fonction qui tente de modifier `x` par valeur, et une autre par adresse. Observez la différence.
+2. **Le gestionnaire d'étudiants :** Créez une structure `Etudiant` avec un nom, un âge et un tableau de notes. Écrivez une fonction qui affiche l'étudiant en utilisant un pointeur `const Etudiant *` pour protéger les données.
+3. **Le rectangle dynamique :** Créez une structure `Rectangle` contenant deux structures `Point` (haut-gauche, bas-droite). Écrivez une fonction qui calcule l'aire en passant uniquement le pointeur du rectangle.
+4. **Initialisation par "Constructeur" :** Créez une fonction `create_pixel(int x, int y, int color)` qui alloue dynamiquement une structure `Pixel` sur le tas et la retourne.
+5. **Tableau de structures :** Créez un tableau de 10 structures `Produit`. Écrivez une fonction qui trie ce tableau par prix en utilisant un pointeur pour parcourir le tableau.
+
+### II. Structures et Tableaux Dynamiques
+
+6. **Chaînes de caractères dynamiques :** Créez une structure `String` qui contient un `char *data` et un `int length`. Écrivez une fonction pour l'initialiser proprement avec `malloc`.
+7. **Tableau extensible (Vector) :** Créez une structure `Vector` contenant un pointeur d'entiers, une taille et une capacité. Implémentez une fonction `push_back` qui réalloue de la mémoire quand la capacité est pleine.
+8. **La Matrice structurée :** Créez une structure `Matrix` contenant `int rows, cols` et `float **data`. Écrivez les fonctions d'allocation et de libération.
+9. **Le catalogue de livres :** Créez une structure `Livre`. Écrivez un programme qui demande à l'utilisateur combien de livres il veut saisir, alloue le tableau de structures exact, puis libère tout à la fin.
+10. **Gestion de mémoire complexe :** Créez une structure `User` qui contient un pointeur vers une autre structure `Profile`. Gérez l'allocation et la libération en cascade (Deep Free).
+
+### III. Structures de Données (Pointeurs Auto-référencés)
+
+11. **La Liste Chaînée (Basique) :** Créez une structure `Node` contenant un entier et un pointeur `next`. Implémentez l'ajout en tête.
+12. **Suppression en Liste :** Écrivez une fonction qui supprime un nœud spécifique dans une liste chaînée en manipulant les pointeurs de la structure précédente.
+13. **File (Queue) de structures :** Implémentez une file d'attente pour des "Tickets" de support technique utilisant des structures et des pointeurs `head` et `tail`.
+14. **Arbre Généalogique :** Créez une structure `Personne` avec des pointeurs `pere` et `mere`. Écrivez une fonction pour vérifier si deux personnes sont "frères".
+15. **Graphe simple :** Créez une structure `Sommet` qui contient un tableau de pointeurs vers d'autres `Sommets` (liste d'adjacence).
+
+### IV. Concepts Avancés
+
+16. **Pointeurs de fonctions dans une structure :** Créez une structure `Operation` qui contient deux entiers et un pointeur de fonction `int (*action)(int, int)`.
+17. **Le simulateur d'objets :** Créez une structure `Animal` avec un pointeur de fonction `crier`. Faites en sorte que le "Chien" et le "Chat" utilisent la même structure mais des fonctions différentes.
+18. **Union et Type :** Utilisez une `union` à l'intérieur d'une structure pour stocker soit un `int`, soit un `float`, avec un `enum` pour savoir quel type est utilisé.
+19. **Bitfields (Champs de bits) :** Créez une structure `Registre` pour simuler le contrôle d'un matériel où chaque bit a une signification précise (ex: bit 0 = ON/OFF).
+20. **Padding et Alignement :** Utilisez `sizeof` pour comparer la taille de deux structures contenant les mêmes variables mais dans un ordre différent. Expliquez le "padding".
+
+### V. Défis de Conception "Réels"
+
+21. **Mini Système de Fichiers :** Créez une structure `Fichier` et une structure `Dossier` (qui contient un tableau de pointeurs vers des fichiers).
+22. **Parsing CSV :** Créez une structure `Client`. Lisez un fichier texte et chargez chaque ligne dans une structure allouée dynamiquement.
+23. **Calculatrice à pile (RPN) :** Utilisez une pile de structures pour évaluer une expression mathématique.
+24. **Pool d'objets :** Créez une structure `Pool` qui pré-alloue 100 structures `Ennemi` pour un jeu, et une fonction pour "emprunter" un ennemi actif.
+25. **L'itérateur :** Créez une structure `Iterator` qui permet de parcourir une liste chaînée de manière abstraite (fonctions `has_next` et `next`).
+
+---
+
+### Pourquoi est-ce "difficile" ?
+
+La difficulté ne vient pas de la structure elle-même, mais de la **gestion de la mémoire partagée**. Par exemple, si deux structures pointent vers la même zone mémoire, qui doit appeler `free()` ?
+
+### Un bon point de départ ?
+
+Si tu veux tester tes capacités dès maintenant, essaie de réaliser l'**exercice 7 (le Vector)**. C'est l'exercice le plus complet pour comprendre comment les structures et les pointeurs permettent de dépasser les limites des tableaux statiques du C.
+
+**Souhaites-tu que je te donne le "squelette" de code pour l'un de ces exercices afin que tu puisses le compléter ?**
+
