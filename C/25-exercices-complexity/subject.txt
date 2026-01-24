@@ -1,0 +1,239 @@
+Excellent thème 🔥
+Maîtriser les **complexités algorithmiques** = penser **performance, scalabilité et efficacité**, pas seulement “ça marche”.
+C’est **indispensable** pour l’algorithmique, les entretiens, les concours et les projets sérieux.
+
+Je te propose **25 exercices progressifs**, **du niveau débutant au niveau expert**, pour comprendre **et analyser** les complexités :
+**O(1), O(log n), O(n), O(n log n), O(n²), O(2ⁿ), O(n!)**.
+
+👉 **Sans correction**, uniquement des **énoncés** + **analyse demandée**.
+
+---
+
+# 🟢 Niveau 1 — Bases de la complexité (1–5)
+
+> Objectif : savoir lire et estimer une complexité
+
+### Exercice 1 – Lecture de code
+
+* Analyse la complexité d’une fonction contenant :
+
+  * une seule instruction
+  * une boucle simple
+
+---
+
+### Exercice 2 – Boucles imbriquées
+
+* Analyse la complexité d’un code avec deux boucles imbriquées
+
+---
+
+### Exercice 3 – Boucle dépendante
+
+* Analyse une boucle interne dépendante de la variable externe
+
+---
+
+### Exercice 4 – Constantes ignorées
+
+* Explique pourquoi `O(2n + 5)` devient `O(n)`
+
+---
+
+### Exercice 5 – Pire / meilleur cas
+
+* Donne la complexité :
+
+  * meilleur cas
+  * pire cas
+  * cas moyen
+* Pour une recherche linéaire
+
+---
+
+# 🟡 Niveau 2 — Complexités classiques (6–10)
+
+> Objectif : associer algorithme ↔ complexité
+
+### Exercice 6 – Recherche
+
+* Compare la complexité :
+
+  * recherche linéaire
+  * recherche binaire
+
+---
+
+### Exercice 7 – Tris
+
+* Analyse la complexité :
+
+  * bubble sort
+  * insertion sort
+  * selection sort
+
+---
+
+### Exercice 8 – Tri efficace
+
+* Analyse merge sort et quick sort
+* Différence pire / moyen cas
+
+---
+
+### Exercice 9 – Tableaux vs listes
+
+* Compare l’accès et l’insertion
+* Justifie la complexité
+
+---
+
+### Exercice 10 – Hash table
+
+* Analyse la complexité moyenne et pire cas
+
+---
+
+# 🟠 Niveau 3 — Récursivité et complexité (11–15)
+
+> Objectif : comprendre l’impact de la récursion
+
+### Exercice 11 – Factorielle
+
+* Analyse la complexité temporelle et spatiale
+
+---
+
+### Exercice 12 – Fibonacci naïf
+
+* Analyse la complexité
+* Explique pourquoi elle est mauvaise
+
+---
+
+### Exercice 13 – Fibonacci optimisé
+
+* Analyse la complexité avec mémoïsation
+
+---
+
+### Exercice 14 – Divide & Conquer
+
+* Analyse un algorithme qui divise le problème en deux
+
+---
+
+### Exercice 15 – Arbres récursifs
+
+* Analyse la complexité d’un parcours d’arbre
+
+---
+
+# 🔵 Niveau 4 — Optimisation et choix (16–20)
+
+> Objectif : choisir le bon algorithme
+
+### Exercice 16 – Amélioration
+
+* Passe un algorithme de `O(n²)` à `O(n)`
+
+---
+
+### Exercice 17 – Pré-calcul
+
+* Utilise un tableau auxiliaire
+* Analyse gain/perte mémoire
+
+---
+
+### Exercice 18 – Deux pointeurs
+
+* Analyse la complexité d’un algorithme à deux indices
+
+---
+
+### Exercice 19 – Sliding window
+
+* Analyse la complexité de cette technique
+
+---
+
+### Exercice 20 – BFS vs DFS
+
+* Compare leurs complexités
+
+---
+
+# 🔴 Niveau 5 — Expert / Raisonnement avancé (21–25)
+
+> Objectif : penser comme un ingénieur
+
+### Exercice 21 – Comparaison d’algorithmes
+
+* Choisis le meilleur algorithme selon :
+
+  * taille d’entrée
+  * contraintes mémoire
+
+---
+
+### Exercice 22 – Complexité spatiale
+
+* Analyse la mémoire utilisée par un algorithme
+
+---
+
+### Exercice 23 – Trade-off
+
+* Explique le compromis temps / mémoire
+
+---
+
+### Exercice 24 – Problème NP
+
+* Analyse pourquoi un problème est `O(2ⁿ)` ou `O(n!)`
+
+---
+
+### Exercice 25 – Mini-projet (🔥)
+
+* Compare plusieurs solutions à un même problème
+* Mesure :
+
+  * temps
+  * mémoire
+* Justifie le choix final
+
+---
+
+## 🎯 Méthode recommandée
+
+1. Toujours compter les opérations dominantes
+2. Ignorer constantes et termes faibles
+3. Identifier la structure (boucle, récursion, appel)
+4. Tester avec des tailles croissantes
+
+---
+
+## 🧠 Résumé des complexités clés
+
+| Complexité | Exemple           |
+| ---------- | ----------------- |
+| O(1)       | accès tableau     |
+| O(log n)   | recherche binaire |
+| O(n)       | parcours          |
+| O(n log n) | tri efficace      |
+| O(n²)      | double boucle     |
+| O(2ⁿ)      | backtracking      |
+| O(n!)      | permutations      |
+
+---
+
+Si tu veux ensuite :
+
+* corrigés détaillés
+* fiches “reconnaître une complexité”
+* exercices pièges type **exam**
+* comparaison visuelle des croissances
+
+Dis-moi 🚀

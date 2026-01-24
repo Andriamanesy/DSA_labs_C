@@ -1,0 +1,212 @@
+Excellent 🔥
+Les **arbres** sont une **structure de données clé** en algorithmique, systèmes, compilateurs, bases de données, IA, etc.
+Les maîtriser = **pointeurs + récursivité + algorithmique + rigueur mémoire**.
+
+Je te propose **25 exercices progressifs**, **du niveau débutant au niveau expert**, pensés **niveau 42 / algorithmique / système**.
+
+👉 **Sans correction**, uniquement des **énoncés clairs**, pour t’obliger à réfléchir et à raisonner sur la structure.
+
+---
+
+# 🟢 Niveau 1 — Bases des arbres (1–5)
+
+> Objectif : comprendre la structure et le vocabulaire
+
+### Exercice 1 – Nœud d’arbre
+
+* Définis une structure `t_node` représentant un nœud d’arbre binaire :
+
+  * une valeur
+  * un pointeur gauche
+  * un pointeur droit
+
+---
+
+### Exercice 2 – Arbre simple
+
+* Crée manuellement un arbre de 3 nœuds
+* Relie correctement les pointeurs
+
+---
+
+### Exercice 3 – Feuille / racine
+
+* Écris une fonction qui détecte :
+
+  * si un nœud est une feuille
+  * si un nœud est la racine
+
+---
+
+### Exercice 4 – Hauteur
+
+* Écris une fonction qui retourne la hauteur d’un arbre
+
+---
+
+### Exercice 5 – Taille
+
+* Écris une fonction qui compte le nombre de nœuds
+
+---
+
+# 🟡 Niveau 2 — Parcours d’arbres (6–10)
+
+> Objectif : maîtriser la récursivité
+
+### Exercice 6 – Parcours préfixe
+
+* Implémente un parcours **pré-ordre**
+
+---
+
+### Exercice 7 – Parcours infixe
+
+* Implémente un parcours **in-ordre**
+
+---
+
+### Exercice 8 – Parcours postfixe
+
+* Implémente un parcours **post-ordre**
+
+---
+
+### Exercice 9 – Parcours en largeur
+
+* Implémente un parcours **BFS**
+* Utilise une file
+
+---
+
+### Exercice 10 – Recherche
+
+* Recherche une valeur dans un arbre binaire simple
+
+---
+
+# 🟠 Niveau 3 — Arbres binaires de recherche (11–15)
+
+> Objectif : BST (Binary Search Tree)
+
+### Exercice 11 – Insertion BST
+
+* Insère une valeur dans un BST
+* Respecte les règles BST
+
+---
+
+### Exercice 12 – Recherche BST
+
+* Recherche une valeur efficacement dans un BST
+
+---
+
+### Exercice 13 – Minimum / Maximum
+
+* Trouve la valeur minimale et maximale dans un BST
+
+---
+
+### Exercice 14 – Suppression
+
+* Supprime un nœud d’un BST
+* Gère les 3 cas classiques
+
+---
+
+### Exercice 15 – Validation BST
+
+* Vérifie si un arbre est un BST valide
+
+---
+
+# 🔵 Niveau 4 — Arbres avancés (16–20)
+
+> Objectif : structure + performance
+
+### Exercice 16 – Arbre équilibré
+
+* Vérifie si un arbre est équilibré
+
+---
+
+### Exercice 17 – Profondeur minimale
+
+* Trouve la profondeur minimale d’un arbre
+
+---
+
+### Exercice 18 – Arbre miroir
+
+* Inverse un arbre (miroir)
+
+---
+
+### Exercice 19 – Plus proche ancêtre commun
+
+* Trouve le **Lowest Common Ancestor (LCA)**
+
+---
+
+### Exercice 20 – Construction depuis parcours
+
+* Reconstruis un arbre à partir de deux parcours
+
+---
+
+# 🔴 Niveau 5 — Expert / Applications (21–25)
+
+> Objectif : niveau professionnel
+
+### Exercice 21 – Arbre générique
+
+* Implémente un arbre stockant `void *`
+
+---
+
+### Exercice 22 – Arbre N-aire
+
+* Implémente un arbre avec un nombre variable d’enfants
+
+---
+
+### Exercice 23 – Arbre d’expression
+
+* Évalue une expression mathématique via un arbre
+
+---
+
+### Exercice 24 – Arbre auto-équilibré
+
+* Implémente un **AVL** ou **Red-Black Tree**
+
+---
+
+### Exercice 25 – Mini-projet (🔥)
+
+* Implémente un **système de fichiers simplifié**
+* Chaque dossier est un nœud
+* Navigation, ajout, suppression
+* Parcours récursif
+* Mémoire propre
+
+---
+
+## 🎯 Méthode de travail recommandée
+
+* Toujours dessiner l’arbre
+* Tracer les appels récursifs
+* Tester chaque cas limite
+* Vérifier les leaks (`valgrind`)
+
+---
+
+Si tu veux ensuite :
+
+* corrigés détaillés
+* focus spécial **récursivité**
+* arbres **AVL vs Red-Black**
+* exercices type **exam 42**
+
+Dis-moi 🌳🔥

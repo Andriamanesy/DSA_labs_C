@@ -1,0 +1,260 @@
+Très bon sujet 🔥
+Les **problèmes de consensus distribué** sont au cœur des **systèmes distribués**, **blockchain**, **bases de données**, **OS**, **réseaux** et **tolérance aux pannes**.
+
+Je te propose **25 exercices progressifs**, **du niveau conceptuel au niveau expert**, pour maîtriser :
+
+* le **consensus**
+* les **pannes**
+* les **réseaux asynchrones**
+* les algorithmes classiques (**Paxos, Raft, Byzantine**)
+* les **impossibilités théoriques**
+
+👉 **Sans correction**, uniquement des **énoncés**, comme en vrai cours / recherche / école d’ingénieur.
+
+---
+
+# 🟢 Niveau 1 — Bases du consensus (1–5)
+
+> Objectif : comprendre le problème
+
+### Exercice 1 – Définition du consensus
+
+* Donne une définition formelle du **consensus distribué**
+* Liste ses propriétés fondamentales
+
+---
+
+### Exercice 2 – Exemple concret
+
+* Donne un exemple réel où le consensus est nécessaire
+* Explique ce qui se passe si le consensus échoue
+
+---
+
+### Exercice 3 – Modèles de système
+
+* Compare :
+
+  * système synchrone
+  * asynchrone
+  * partiellement synchrone
+
+---
+
+### Exercice 4 – Types de pannes
+
+* Décris :
+
+  * crash fault
+  * omission fault
+  * Byzantine fault
+
+---
+
+### Exercice 5 – Consensus vs accord
+
+* Explique la différence entre :
+
+  * consensus
+  * accord
+  * diffusion fiable
+
+---
+
+# 🟡 Niveau 2 — Problèmes fondamentaux (6–10)
+
+> Objectif : comprendre les limites
+
+### Exercice 6 – FLP Impossibility
+
+* Explique le théorème **FLP**
+* Dans quel modèle s’applique-t-il ?
+
+---
+
+### Exercice 7 – Asynchronisme
+
+* Pourquoi l’asynchronisme rend le consensus difficile ?
+
+---
+
+### Exercice 8 – Détecteurs de pannes
+
+* Qu’est-ce qu’un failure detector ?
+* Pourquoi sont-ils nécessaires ?
+
+---
+
+### Exercice 9 – Quorum
+
+* Définis un quorum
+* Pourquoi la majorité est-elle importante ?
+
+---
+
+### Exercice 10 – CAP theorem
+
+* Explique le théorème **CAP**
+* Relie-le au consensus
+
+---
+
+# 🟠 Niveau 3 — Algorithmes classiques (11–15)
+
+> Objectif : comprendre les mécanismes
+
+### Exercice 11 – Paxos (base)
+
+* Décris les rôles :
+
+  * proposer
+  * acceptor
+  * learner
+
+---
+
+### Exercice 12 – Paxos phases
+
+* Explique les deux phases de Paxos
+* Quel problème résolvent-elles ?
+
+---
+
+### Exercice 13 – Multi-Paxos
+
+* Pourquoi Multi-Paxos est-il plus efficace ?
+
+---
+
+### Exercice 14 – Raft
+
+* Compare Raft et Paxos
+* Pourquoi Raft est-il plus simple à comprendre ?
+
+---
+
+### Exercice 15 – Leader election
+
+* Décris un algorithme d’élection de leader
+* Analyse les cas de panne
+
+---
+
+# 🔵 Niveau 4 — Tolérance aux fautes (16–20)
+
+> Objectif : gérer les défaillances réelles
+
+### Exercice 16 – Crash fault tolerance
+
+* Combien de nœuds sont nécessaires pour tolérer `f` pannes ?
+
+---
+
+### Exercice 17 – Byzantine Generals Problem
+
+* Explique le problème
+* Pourquoi est-il plus difficile ?
+
+---
+
+### Exercice 18 – Byzantine Fault Tolerance (BFT)
+
+* Explique pourquoi il faut `3f + 1` nœuds
+
+---
+
+### Exercice 19 – PBFT
+
+* Décris les phases de PBFT
+* Analyse le coût en messages
+
+---
+
+### Exercice 20 – Réseaux partitionnés
+
+* Que se passe-t-il lors d’une partition réseau ?
+* Comment un algorithme de consensus réagit ?
+
+---
+
+# 🔴 Niveau 5 — Expert / Applications réelles (21–25)
+
+> Objectif : niveau ingénieur / recherche
+
+### Exercice 21 – Blockchain
+
+* Explique comment le consensus est utilisé dans une blockchain
+* Compare PoW, PoS, BFT
+
+---
+
+### Exercice 22 – Log replication
+
+* Explique la réplication de logs dans Raft
+* Pourquoi est-ce central ?
+
+---
+
+### Exercice 23 – Performance
+
+* Analyse les compromis :
+
+  * latence
+  * throughput
+  * tolérance aux pannes
+
+---
+
+### Exercice 24 – Implémentation
+
+* Conçois un mini-algorithme de consensus
+* Hypothèses :
+
+  * crash-only
+  * majorité
+  * messages fiables
+
+---
+
+### Exercice 25 – Mini-projet (🔥)
+
+* Conçois un **système distribué répliqué**
+* Choisis :
+
+  * modèle réseau
+  * type de pannes
+  * algorithme de consensus
+* Justifie chaque choix
+* Analyse les limites
+
+---
+
+## 🧠 Propriétés du consensus à maîtriser
+
+* **Safety** (rien de faux)
+* **Liveness** (quelque chose finit par arriver)
+* **Agreement**
+* **Validity**
+* **Termination**
+
+---
+
+## 🎯 Méthode recommandée
+
+1. Toujours préciser le **modèle**
+2. Identifier les **pannes tolérées**
+3. Analyser les **messages**
+4. Vérifier safety avant liveness
+5. Raisonner en **cas extrêmes**
+
+---
+
+Si tu veux ensuite :
+
+* exercices **avec scénarios et timelines**
+* **pseudo-code** de Paxos / Raft
+* **comparatif consensus vs atomic broadcast**
+* **implémentation simplifiée en C / Python**
+* **exercices type master / PhD**
+
+Dis-moi 🔥

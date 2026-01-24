@@ -1,0 +1,228 @@
+Parfait 🔥
+Je vais te préparer **25 exercices progressifs** sur **les pannes dans les systèmes distribués**, du **niveau débutant au niveau expert**, pour que tu maîtrises **les types de pannes, la détection, la tolérance et la récupération**, ainsi que l’impact sur **consensus, réplication, et disponibilité**.
+
+Chaque exercice est pensé pour être **conceptuel et pratique**, comme à 42 ou dans un cours avancé de systèmes distribués.
+
+---
+
+# 🟢 Niveau 1 — Comprendre les pannes (1–5)
+
+> Objectif : connaître les types de pannes et leurs effets
+
+### Exercice 1 – Classification des pannes
+
+* Liste et décris les types de pannes :
+
+  * crash
+  * omission
+  * timing
+  * Byzantine
+* Donne un exemple réel pour chaque type
+
+---
+
+### Exercice 2 – Crash simple
+
+* Simule un nœud qui s’éteint brutalement dans un système à 3 nœuds
+* Analyse l’effet sur le fonctionnement global
+
+---
+
+### Exercice 3 – Pannes réseau
+
+* Simule la perte d’un message ou un délai de réseau
+* Quelle est la différence entre omission et timing fault ?
+
+---
+
+### Exercice 4 – Pannes partielles
+
+* Simule un nœud qui répond lentement ou intermittente
+* Décris l’impact sur les autres nœuds et les opérations en cours
+
+---
+
+### Exercice 5 – Pannes arbitraires
+
+* Simule un nœud qui envoie des informations contradictoires (Byzantine)
+* Explique pourquoi les algorithmes classiques échouent
+
+---
+
+# 🟡 Niveau 2 — Détection et monitoring (6–10)
+
+> Objectif : détecter les pannes pour pouvoir réagir
+
+### Exercice 6 – Heartbeat
+
+* Implémente un mécanisme de heartbeat simple
+* Explique comment un nœud peut détecter une panne
+
+---
+
+### Exercice 7 – Timeout
+
+* Définis un timeout pour détecter un crash
+* Discute des limites dans un réseau asynchrone
+
+---
+
+### Exercice 8 – Failure detector fiable
+
+* Compare un détecteur de panne fiable et un détecteur suspectible
+* Donne un scénario où le détecteur suspectible est suffisant
+
+---
+
+### Exercice 9 – Redondance
+
+* Analyse comment répliquer un service peut tolérer `f` pannes
+* Combien de nœuds faut-il pour tolérer `f = 2` ?
+
+---
+
+### Exercice 10 – Majority / quorum
+
+* Explique pourquoi un quorum est nécessaire
+* Détermine le nombre de nœuds minimum pour continuer à fonctionner
+
+---
+
+# 🟠 Niveau 3 — Pannes et algorithmes (11–15)
+
+> Objectif : impact des pannes sur les algorithmes distribués
+
+### Exercice 11 – Paxos crash
+
+* Simule un crash d’un acceptor dans Paxos
+* Analyse l’impact sur le consensus
+
+---
+
+### Exercice 12 – Leader crash
+
+* Dans Raft, simule le crash du leader
+* Décris le mécanisme d’élection pour le remplacer
+
+---
+
+### Exercice 13 – Partition réseau
+
+* Simule une partition réseau entre 2 groupes de nœuds
+* Analyse la cohérence et la disponibilité
+
+---
+
+### Exercice 14 – Perte de messages
+
+* Simule un message perdu dans un échange Paxos ou Raft
+* Analyse comment l’algorithme peut continuer ou échouer
+
+---
+
+### Exercice 15 – Byzantine behavior
+
+* Simule un nœud malveillant qui envoie des valeurs différentes à différents nœuds
+* Explique pourquoi un protocole classique sans BFT échoue
+
+---
+
+# 🔵 Niveau 4 — Tolérance et récupération (16–20)
+
+> Objectif : concevoir un système résilient
+
+### Exercice 16 – Réplication synchrone
+
+* Implémente un modèle synchrone et analyse combien de crashs sont tolérés
+
+---
+
+### Exercice 17 – Réplication asynchrone
+
+* Implémente un modèle asynchrone
+* Analyse les risques de divergence et de perte de données
+
+---
+
+### Exercice 18 – Checkpointing
+
+* Implémente un mécanisme de checkpoint pour récupérer après crash
+* Analyse la granularité nécessaire pour minimiser la perte
+
+---
+
+### Exercice 19 – Recovery d’un nœud
+
+* Simule un nœud qui revient après un crash
+* Détermine comment synchroniser son état avec le cluster
+
+---
+
+### Exercice 20 – Quorum et disponibilité
+
+* Analyse le scénario où certains nœuds sont indisponibles
+* Détermine si les opérations peuvent continuer ou non
+
+---
+
+# 🔴 Niveau 5 — Expert / Scénarios complexes (21–25)
+
+> Objectif : niveau ingénieur / recherche
+
+### Exercice 21 – Crash + partition combiné
+
+* Simule une partition réseau avec crash d’un leader
+* Analyse sécurité et disponibilité
+
+---
+
+### Exercice 22 – Byzantine Fault Tolerance
+
+* Implémente un mini-scénario BFT avec 4 nœuds
+* Teste 1 nœud malveillant
+* Analyse les messages nécessaires pour atteindre le consensus
+
+---
+
+### Exercice 23 – Failover automatique
+
+* Conçois un système qui bascule automatiquement vers un nœud de secours
+* Décris le protocole et les conditions
+
+---
+
+### Exercice 24 – Performance et résilience
+
+* Analyse l’impact des mécanismes de tolérance aux pannes sur :
+
+  * latence
+  * throughput
+  * mémoire
+
+---
+
+### Exercice 25 – Mini-projet (🔥)
+
+* Conçois un **système distribué résilient** :
+
+  * au moins 5 nœuds
+  * crash + partition simulés
+  * réplication de données
+  * failover automatique
+  * rédaction d’un rapport sur sécurité, disponibilité et limitations
+
+---
+
+## 🧠 Concepts clés à retenir
+
+* **Types de pannes** : crash, omission, timing, Byzantine
+* **Tolérance aux pannes** : nombre de nœuds pour supporter `f` pannes
+* **Recovery / failover** : reprise après panne
+* **Quorum / majorité** : continuer à fonctionner malgré des pannes
+* **Algorithmes** : Paxos, Raft, PBFT
+
+---
+
+Si tu veux, je peux ensuite te préparer **25 mini-scénarios pratiques avec diagrammes de messages et timelines**, pour **simuler réellement les pannes et observer l’effet** dans un cluster distribué 🔥.
+
+Veux‑tu que je fasse ça ?

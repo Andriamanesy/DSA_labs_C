@@ -1,0 +1,214 @@
+Excellent choix 🔥
+La **récursivité** est une compétence **fondamentale et souvent mal comprise**, surtout en C.
+La maîtriser = **penser en appels de fonctions + pile d’exécution + cas d’arrêt**.
+
+Je te propose **25 exercices progressifs**, **du niveau débutant au niveau expert**, conçus pour te faire **penser récursif**, pas juste “écrire une fonction”.
+
+👉 **Sans correction**, uniquement des **énoncés clairs**, comme à 42.
+
+---
+
+# 🟢 Niveau 1 — Comprendre la récursivité (1–5)
+
+> Objectif : comprendre le mécanisme appel → retour
+
+### Exercice 1 – Cas de base
+
+* Écris une fonction récursive qui affiche les nombres de `n` à `0`
+* Identifie clairement le **cas d’arrêt**
+
+---
+
+### Exercice 2 – Compteur simple
+
+* Affiche les nombres de `0` à `n` récursivement
+* Sans boucle
+
+---
+
+### Exercice 3 – Somme
+
+* Calcule la somme des nombres de `1` à `n`
+* Uniquement avec récursivité
+
+---
+
+### Exercice 4 – Factorielle
+
+* Implémente la factorielle récursive
+* Gère les cas invalides
+
+---
+
+### Exercice 5 – Puissance
+
+* Calcule `xⁿ` récursivement
+* Sans utiliser `pow`
+
+---
+
+# 🟡 Niveau 2 — Récursivité et tableaux (6–10)
+
+> Objectif : récursion sur des collections
+
+### Exercice 6 – Parcours de tableau
+
+* Affiche un tableau récursivement
+* Sans boucle
+
+---
+
+### Exercice 7 – Maximum
+
+* Trouve le maximum d’un tableau récursivement
+
+---
+
+### Exercice 8 – Recherche
+
+* Recherche une valeur dans un tableau récursivement
+
+---
+
+### Exercice 9 – Inversion
+
+* Inverse un tableau récursivement
+
+---
+
+### Exercice 10 – Vérification
+
+* Vérifie si un tableau est trié récursivement
+
+---
+
+# 🟠 Niveau 3 — Chaînes et structures (11–15)
+
+> Objectif : récursion pratique
+
+### Exercice 11 – Longueur de string
+
+* Calcule la longueur d’une chaîne récursivement
+
+---
+
+### Exercice 12 – Palindrome
+
+* Vérifie si une chaîne est un palindrome récursivement
+
+---
+
+### Exercice 13 – Impression inversée
+
+* Affiche une chaîne à l’envers récursivement
+
+---
+
+### Exercice 14 – Liste chaînée
+
+* Parcours une liste chaînée récursivement
+
+---
+
+### Exercice 15 – Compte nœuds
+
+* Compte les nœuds d’une liste récursivement
+
+---
+
+# 🔵 Niveau 4 — Arbres et backtracking (16–20)
+
+> Objectif : récursion profonde et contrôlée
+
+### Exercice 16 – Hauteur d’arbre
+
+* Calcule la hauteur d’un arbre binaire récursivement
+
+---
+
+### Exercice 17 – Parcours d’arbre
+
+* Implémente :
+
+  * pré-ordre
+  * in-ordre
+  * post-ordre
+
+---
+
+### Exercice 18 – Comptage de chemins
+
+* Compte tous les chemins possibles dans une grille
+* Sans boucle
+
+---
+
+### Exercice 19 – N-Queens
+
+* Résous le problème des N reines
+* Utilise le backtracking récursif
+
+---
+
+### Exercice 20 – Sudoku (mini)
+
+* Résous un Sudoku simple récursivement
+
+---
+
+# 🔴 Niveau 5 — Expert / Maîtrise totale (21–25)
+
+> Objectif : récursion avancée et optimisée
+
+### Exercice 21 – Récursion indirecte
+
+* Implémente deux fonctions qui s’appellent mutuellement
+
+---
+
+### Exercice 22 – Mémoïsation
+
+* Optimise un calcul récursif coûteux
+* Compare les performances
+
+---
+
+### Exercice 23 – Conversion récursive
+
+* Convertis un nombre décimal en binaire récursivement
+
+---
+
+### Exercice 24 – Suppression récursive
+
+* Libère complètement une structure récursive (arbre / liste)
+
+---
+
+### Exercice 25 – Mini-projet (🔥)
+
+* Implémente un **parser récursif**
+* Analyse une expression mathématique
+* Évalue le résultat
+* Gestion mémoire parfaite
+
+---
+
+## 🎯 Règles d’or de la récursivité
+
+1. **Toujours un cas d’arrêt clair**
+2. Chaque appel doit **se rapprocher du cas d’arrêt**
+3. Penser à la **pile d’appels**
+4. Éviter la récursion infinie
+
+---
+
+Si tu veux ensuite :
+
+* corrections détaillées
+* visualisation de la pile d’appels
+* version récursive vs itérative
+* pièges classiques à éviter
+* exercices type **exam 42**
+
+Dis-moi 🔁🔥
