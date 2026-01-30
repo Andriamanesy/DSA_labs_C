@@ -7,13 +7,3 @@ Exercice 3 – Pointeur non initialisé
 *
  * */
 
-#include <stdio.h>
-
-int main()
-{
-    int *ptr = NULL;
-
-    printf ("valeur pointer --> %d", *ptr);
-
-    return 0;
-}
