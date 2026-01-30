@@ -1,7 +1,6 @@
 NAME= solution
 CC= cc
 CFLAGS= -Wall -Wextra -Werror -g
-
 SRC= ex00.c
 OBJ= $(SRC:.c=.o)
 
@@ -21,4 +20,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re
