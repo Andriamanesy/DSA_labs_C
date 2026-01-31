@@ -19,7 +19,7 @@ int main(void)
     printf("\n------get_last----------\n");
     printf("Le dernier element est : %s", (char *)last->content);
     printf("\n La taille de la liste est: %d\n", list_size(list));
-    t_node *noeud_index = list_at(list, 1);
+    t_node *noeud_index = list_at(list, 0);
     noeud_index->content = "Brian A.";
     printf("\nnoeud recuperer par index et changer le contenue du noeud\n");
     print_list(list);

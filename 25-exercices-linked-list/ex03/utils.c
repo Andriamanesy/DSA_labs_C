@@ -30,7 +30,7 @@ t_node *add_back(t_node **list, t_node *new_node)
         return (*list);
     t_node *tmp;
     tmp = *list;
-    while(tmp->next)
+    while (tmp->next)
         tmp = tmp->next;
     tmp->next = new_node;
     return (new_node);
@@ -48,27 +48,24 @@ t_node *get_last(t_node *list)
     return (last);
 }
 
-void print_list(t_node *list)
+void print_list(t_node *list) 
 {
-    t_node *tmp;
-    int i;
+    int i = 1;
 
     if (!list)
-        printf("La liste est vide.\n");
-    tmp = list;
-    i = 1;
-    while (tmp)
+        printf("La liste est vide\n");
+    while (list)
     {
-        if (tmp->type == 'i')
-            printf("La valeur dans le noeud numero %d est %d\n", i, *(int *)tmp->content);
-        else if (tmp->type == 's')
-            printf("La valeur dans le noeud numero %d est %s\n", i, (char *)tmp->content);
+        if (list->type == 'i')
+            printf("Valeur %d : %d\n", i, *(int *)list->content);
+        else if (list->type == 's')
+            printf("Valeur %d : %s\n", i, (char *)list->content);
+        list = list->next;
         i++;
-        tmp = tmp->next;
     }
 }
 
-void    free_list(t_node *list)
+void free_list(t_node *list)
 {
     t_node *tmp;
 
@@ -79,7 +76,6 @@ void    free_list(t_node *list)
         free(list);
         list = tmp;
     }
-    
 }
 
 int list_size(t_node *list)
@@ -99,21 +95,13 @@ int list_size(t_node *list)
 
 t_node *list_at(t_node *list, int index)
 {
-    t_node *new_node;
-    t_node *tmp;
     int i;
 
-    if (!list)
-        return NULL;
-    tmp = list;
     i = 0;
-    while (tmp && (i != index))
+    while (list && (i < index))
     {
-        new_node = tmp;
-        tmp = tmp->next;
+        list = list->next;
         i++;
     }
-    if (tmp || i == index)
-        return new_node;
-    return (NULL);
+    return (list);
 }
