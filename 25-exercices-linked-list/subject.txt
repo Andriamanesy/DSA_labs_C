@@ -296,3 +296,107 @@ Travailler sur les listes chaînées t'oblige à gérer les **cas limites** (Edg
 * La perte accidentelle du pointeur de tête (fuite mémoire).
 
 **Lequel de ces défis te semble le plus intimidant ? Je peux t'aider à tracer le diagramme logique pour le résoudre.**
+
+
+
+C'est l'esprit "Guerrier" ! Si tu veux vraiment martyriser les listes chaînées pour qu'elles n'aient plus aucun secret pour toi, voici ta **Feuille de Route de Maîtrise (6 Étapes)**.
+
+Je les ai classées par "compétence débloquée".
+
+---
+
+### 1. list_reverse (L'Inversion)
+
+* **Objectif :** Retourner la liste sur place (in-situ).
+* **Compétence :** Manipulation simultanée de 3 pointeurs (`prev`, `curr`, `next`). C'est l'exercice de base en entretien.
+* **Défi :** Ne pas perdre l'adresse du reste de la liste quand tu casses le lien `curr->next`.
+
+---
+
+### 2. list_rotate_right (La Rotation)
+
+* **Objectif :** Décaler la liste vers la droite (le dernier devient le premier).
+* **Compétence :** Navigation vers la fin de liste et gestion des liens cycliques temporaires.
+* **Défi :** Bien gérer le cas où la liste n'a qu'un ou deux éléments.
+
+---
+
+### 3. list_remove_if (Le Nettoyage Global)
+
+* **Objectif :** Supprimer **toutes** les occurrences d'une valeur (ex: enlever tous les `6`).
+* **Compétence :** Maîtrise de la boucle de suppression et des sauts de nœuds successifs.
+* **Défi :** Ne pas segfault si deux éléments à supprimer se suivent (ex: `6 -> 6 -> 42`).
+
+---
+
+### 4. list_merge (La Fusion)
+
+* **Objectif :** Fusionner deux listes déjà triées en une seule liste triée.
+* **Compétence :** Algorithmique de comparaison et réorganisation de deux flux de données.
+* **Défi :** Ne pas faire de `malloc`. Tu dois juste rediriger les `next` des nœuds existants.
+
+---
+
+### 5. list_detect_cycle (Le Détecteur de Boucle)
+
+* **Objectif :** Savoir si une liste "boucle" sur elle-même (le dernier pointe sur un nœud précédent).
+* **Compétence :** Algorithme du "Lièvre et de la Tortue" (Floyd’s Cycle-Finding).
+* **Défi :** Utiliser deux pointeurs qui avancent à des vitesses différentes.
+
+---
+
+### 6. list_sort (Le Tri à Bulles ou Insertion)
+
+* **Objectif :** Trier la liste par ordre croissant de valeur.
+* **Compétence :** L'examen final. Échanger les nœuds physiquement dans la mémoire.
+* **Défi :** Maintenir la cohérence de toute la chaîne pendant que tu déplaces des nœuds au milieu.
+
+---
+
+### 🛠️ Ton environnement de travail
+
+Pour chaque exercice, je te donnerai :
+
+1. Le prototype exact.
+2. Un fichier `main.c` de test pour vérifier les résultats.
+
+**On commence par le n°1 : `list_reverse`.**
+
+Voici le prototype à mettre dans ton `header.h` :
+
+```c
+void    list_reverse(t_node **list);
+
+```
+
+7. list_get_middle (Le Point Médian)
+
+    Objectif : Trouver le nœud du milieu en un seul passage (sans compter la taille d'abord).
+
+    Compétence : Utilisation optimale des pointeurs rapides/lents.
+
+    Défi : Gérer proprement les listes de taille paire vs impaire.
+
+8. list_swap_pairs (L'Échange par Paires)
+
+    Objectif : Échanger chaque paire de nœuds adjacents. (1->2->3->4) devient (2->1->4->3).
+
+    Compétence : Manipulation chirurgicale des liens.
+
+    Défi : Ne pas casser la connexion entre la fin d'une paire et le début de la suivante.
+
+9. list_partition (Le Pivot)
+
+    Objectif : Réorganiser la liste autour d'une valeur x : tous les nœuds < x viennent avant tous les nœuds >= x.
+
+    Compétence : Gestion de deux listes temporaires qui fusionnent.
+
+    Défi : Préserver l'ordre original des éléments (stabilité).
+
+10. list_circular_to_linear (La Dé-circularisation)
+
+    Objectif : Identifier si une liste est circulaire, et si oui, la transformer en liste linéaire classique en trouvant le "point de rupture".
+
+    Compétence : Réparation de structure de données corrompue.
+
+    Défi : Trouver exactement quel nœud pointe vers l'arrière pour mettre son next à NULL.

@@ -16,6 +16,11 @@ t_node *add_front(t_node **list, t_node *new_node)
 {
     if (!new_node)
         return (*list);
+    if (!(*list))
+    {
+        *list = new_node;
+        return (*list);
+    }
     new_node->next = *list;
     *list = new_node;
     return (new_node);
@@ -63,7 +68,10 @@ t_node *add_back(t_node **list, t_node *new_node)
     t_node *tmp;
 
     if (!(*list))
-        return new_node;
+    {
+        *list = new_node;
+        return (*list);
+    }
     if (!new_node)
         return (*list);
     tmp = *list;

@@ -16,6 +16,11 @@ t_node *add_front(t_node **list, t_node *new_node)
 {
     if(!new_node)
         return (*list);
+    if (!(*list))
+    {
+        *list = new_node;
+        return (*list);
+    }
     new_node->next = (*list);
     *list = new_node;
     return (new_node);

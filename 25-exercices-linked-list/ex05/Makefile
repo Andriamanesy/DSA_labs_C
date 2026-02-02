@@ -1,14 +1,23 @@
-NAME = solution
-SRC = main.c
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+NAME= solution
+CC= gcc
+CFLAGS= -Wall -Wextra -Werror
+SRC= main.c utils.c
+OBJ= $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-    $(CC) $(CFLAGS) $(SRC) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-    rm -f $(NAME)
+	rm -f $(OBJ)
 
-re: clean all
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
