@@ -1,51 +1,53 @@
 #include "header.h"
 
-int cmp_int(void *a, void *b) {
-    return (*(int *)a == *(int *)b);
+#include "header.h"
+#include <stdio.h>
+
+void print_simple(t_node *list)
+{
+    if (!list)
+    {
+        printf("Liste vide.\n");
+        return;
+    }
+    while (list)
+    {
+        printf("[%d]", *(int *)list->content);
+        if (list->next)
+            printf(" -> ");
+        list = list->next;
+    }
+    printf(" -> NULL\n");
 }
 
-void print_test_step(char *msg) {
-    printf("\n--- %s ---\n", msg);
-}
-
-int main(void) {
+int main(void)
+{
     t_node *list = NULL;
-    int values[] = {10, 20, 30, 40, 50, 6, 6, 70};
+    int values[] = {1, 2, 3, 4, 5};
 
-    print_test_step("1. Test Ajouts (front/back)");
-    add_back(&list, create_node(&values[2], 'i'));
-    add_front(&list, create_node(&values[1], 'i'));
-    add_back(&list, create_node(&values[3], 'i'));
-    print_list(list);
-    printf("Taille attendue 3, Taille réelle : %d\n", list_size(list));
+    printf("--- Test 1 : Liste Vide ---\n");
+    reverse_list(&list);
+    print_simple(list);
 
-    print_test_step("2. Test list_at et get_last");
-    t_node *at2 = list_at(list, 1);
-    printf("Index 1 (attendu 30) : %d\n", at2 ? *(int *)at2->content : -1);
-    printf("Dernier (attendu 40) : %d\n", *(int *)get_last(list)->content);
+    printf("\n--- Test 2 : Un seul élément ---\n");
+    add_back(&list, create_node(&values[0], 'i'));
+    reverse_list(&list);
+    print_simple(list); // Attendu : [1] -> NULL
 
-    print_test_step("3. Test Pop (front/back)");
-    pop_front(&list);
-    pop_back(&list);
-    print_list(list);
-
-    print_test_step("4. Test list_remove_if (Le gros morceau)");
-    // On remplit avec des doublons : [30, 6, 6, 70]
-    add_back(&list, create_node(&values[5], 'i'));
-    add_back(&list, create_node(&values[6], 'i'));
-    add_back(&list, create_node(&values[7], 'i'));
-    printf("Avant suppression des '6' :\n");
-    print_list(list);
+    printf("\n--- Test 3 : Liste multiple (1, 2, 3, 4, 5) ---\n");
+    // On ajoute le reste
+    for (int i = 1; i < 5; i++)
+        add_back(&list, create_node(&values[i], 'i'));
     
-    int to_remove = 6;
-    list_remove_if(&list, &to_remove);
+    printf("Avant inversion : ");
+    print_simple(list);
     
-    printf("Après suppression (attendu [30, 70]) :\n");
-    print_list(list);
+    reverse_list(&list);
+    
+    printf("Après inversion : ");
+    print_simple(list); // Attendu : [5] -> [4] -> [3] -> [2] -> [1] -> NULL
 
-    print_test_step("5. Nettoyage final");
+    printf("\n--- Nettoyage et Valgrind ---\n");
     free_list(list);
-    printf("Check Valgrind maintenant ! Si '0 errors', tu es prêt pour la colonne de droite.\n");
-
     return (0);
 }

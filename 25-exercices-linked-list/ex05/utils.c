@@ -185,3 +185,26 @@ t_node *list_remove_if(t_node **list, void *content)
     }
     return *list;
 }
+
+void reverse_list(t_node **list)
+{
+    t_node *current;
+    t_node *prev;
+    t_node *next;
+
+    if (!list || !(*list))
+        return;
+    if ((*list)->next == NULL)
+        return;
+    current = *list;
+    prev = NULL;
+    next = current->next;
+    while (current)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *list = prev;
+}
