@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-memory-fundamentals | Exercise: \n");
-    return 0;
-}
+// main.c pour ./01-Level–Foundations/02--25-exercices-memory-fundamentals/ex11

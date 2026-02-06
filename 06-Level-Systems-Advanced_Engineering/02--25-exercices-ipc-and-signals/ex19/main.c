@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-ipc-and-signals | Exercise: ex19\n");
-    return 0;
-}
+// main.c pour ./06-Level-Systems-Advanced_Engineering/02--25-exercices-ipc-and-signals/ex19

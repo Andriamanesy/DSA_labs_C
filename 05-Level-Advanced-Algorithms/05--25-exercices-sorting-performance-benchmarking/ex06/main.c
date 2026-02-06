@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-sorting-performance-benchmarking | Exercise: ex06\n");
-    return 0;
-}
+// main.c pour ./05-Level-Advanced-Algorithms/05--25-exercices-sorting-performance-benchmarking/ex06

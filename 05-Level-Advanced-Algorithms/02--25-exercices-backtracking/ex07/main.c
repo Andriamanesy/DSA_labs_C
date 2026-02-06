@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-backtracking | Exercise: ex07\n");
-    return 0;
-}
+// main.c pour ./05-Level-Advanced-Algorithms/02--25-exercices-backtracking/ex07

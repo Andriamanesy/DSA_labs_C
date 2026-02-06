@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 50-exercices-dijkstra | Exercise: ex05\n");
-    return 0;
-}
+// main.c pour ./04-Level-Graph-Theory/04--50-exercices-dijkstra/ex05

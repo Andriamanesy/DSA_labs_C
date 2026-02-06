@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-heaps-and-priority-queues | Exercise: ex23\n");
-    return 0;
-}
+// main.c pour ./03-Level-Advanced-Structures/02--25-exercices-heaps-and-priority-queues/ex23

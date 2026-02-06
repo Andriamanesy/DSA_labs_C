@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 50-exercices-A* | Exercise: ex09\n");
-    return 0;
-}
+// main.c pour ./04-Level-Graph-Theory/05--50-exercices-A*/ex09

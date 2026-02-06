@@ -211,30 +211,42 @@ void list_rotate_right(t_node **list, int k)
     tmp->next = *list;
     *list = new_head;
 }
+
 void list_sort(t_node **list)
 {
     t_node *current;
     t_node *tmp;
-    int tmp_2;
+    t_node *prev_tmp;
+    t_node *prev_current;
+    t_node *tmp_2;
 
     if (!list || !(*list))
         return;
     current = *list;
+    prev_current = NULL;
     while (current)
     {
+        prev_tmp = current;
         tmp = current->next;
         while (tmp)
         {
             if (current->type == 'i' && tmp->type == 'i' && current->content && tmp->content && *(int *)current->content > *(int *)tmp->content)
             {
-                tmp_2 = *(int *)current->content;
-                *(int *)current->content = *(int *)tmp->content;
-                *(int *)tmp->content = tmp_2;
-                tmp = current->next;
+                tmp_2 = tmp->next;
+                prev_tmp->next = current;
+                tmp->next = current->next;
+                prev_current = prev_tmp;
+                current->next = tmp_2;
+                tmp = tmp->next;
+                *list = tmp;;
             }
             else
+            {
+                prev_tmp = tmp;
                 tmp = tmp->next;
+            }
         }
-        current = current->next;
+        prev_current = current;
+        current = prev_current->next;
     }
 }

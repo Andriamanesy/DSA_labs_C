@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-bit-manipulation | Exercise: ex11\n");
-    return 0;
-}
+// main.c pour ./05-Level-Advanced-Algorithms/03--25-exercices-bit-manipulation/ex11

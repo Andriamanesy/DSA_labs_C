@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-disjoint-set-union | Exercise: ex24\n");
-    return 0;
-}
+// main.c pour ./04-Level-Graph-Theory/02--25-exercices-disjoint-set-union/ex24

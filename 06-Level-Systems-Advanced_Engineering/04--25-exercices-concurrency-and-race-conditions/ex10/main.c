@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-concurrency-and-race-conditions | Exercise: \n");
-    return 0;
-}
+// main.c pour ./06-Level-Systems-Advanced_Engineering/04--25-exercices-concurrency-and-race-conditions/ex10

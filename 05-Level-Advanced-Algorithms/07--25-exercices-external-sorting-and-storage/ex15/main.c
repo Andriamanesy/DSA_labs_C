@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-external-sorting-and-storage | Exercise: ex15\n");
-    return 0;
-}
+// main.c pour ./05-Level-Advanced-Algorithms/07--25-exercices-external-sorting-and-storage/ex15

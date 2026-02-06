@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-low-level-io | Exercise: ex05\n");
-    return 0;
-}
+// main.c pour ./06-Level-Systems-Advanced_Engineering/01--25-exercices-low-level-io/ex05

@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 50-exercices-A* | Exercise: ex39\n");
-    return 0;
-}
+// main.c pour ./03-Level-Advanced-Structures/05--50-exercices-Dictionary/ex39

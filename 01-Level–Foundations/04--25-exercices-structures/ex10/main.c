@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-structures | Exercise: \n");
-    return 0;
-}
+// main.c pour ./01-Level–Foundations/04--25-exercices-structures/ex10

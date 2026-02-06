@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-time-and-clock-problems | Exercise: \n");
-    return 0;
-}
+// main.c pour ./06-Level-Systems-Advanced_Engineering/11--25-exercices-time-and-clock-problems/ex13

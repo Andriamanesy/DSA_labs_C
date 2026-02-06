@@ -1,6 +1,1 @@
-#include <stdio.h>
-
-int main(void) {
-    printf("Lab: 25-exercices-recursion | Exercise: \n");
-    return 0;
-}
+// main.c pour ./02-Level–Core-Data-Structures/03--25-exercices-recursion/ex05
